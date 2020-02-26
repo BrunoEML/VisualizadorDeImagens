@@ -36,7 +36,7 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCorDeFundo = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.cldMudarCor = new System.Windows.Forms.ColorDialog();
             this.ofdSelecionarImagem = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagem)).BeginInit();
@@ -70,7 +70,6 @@
             this.picImagem.Size = new System.Drawing.Size(528, 274);
             this.picImagem.TabIndex = 0;
             this.picImagem.TabStop = false;
-            this.picImagem.Click += new System.EventHandler(this.picImagem_Click);
             // 
             // chkEstender
             // 
@@ -146,7 +145,6 @@
             this.ofdSelecionarImagem.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
     "s (*.*)|*.*";
             this.ofdSelecionarImagem.Title = "Selecionar um arquivo de imagem";
-            this.ofdSelecionarImagem.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Form1
             // 
@@ -175,7 +173,7 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCorDeFundo;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog cldMudarCor;
         private System.Windows.Forms.OpenFileDialog ofdSelecionarImagem;
     }
 }

@@ -29,32 +29,33 @@ namespace VisualizadorDeImagens
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            
+            picImagem.Image = null;
         }
 
         private void btnCorDeFundo_Click(object sender, EventArgs e)
         {
-
+            //Ao se apertar o botão de mudar a cor, caso uma cor tenha sido
+            //selecionada (retornado um "OK", a colocamos com cor de fundo na caixa de imagem
+            if (cldMudarCor.ShowDialog() == DialogResult.OK)
+            {
+                picImagem.BackColor = cldMudarCor.Color;
+            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void chkEstender_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chkEstender.Checked)
+            {
+                picImagem.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+                picImagem.SizeMode = PictureBoxSizeMode.CenterImage;
         }
 
-        private void picImagem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
     }
 }
