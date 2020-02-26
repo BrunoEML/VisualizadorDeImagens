@@ -36,6 +36,8 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCorDeFundo = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.ofdSelecionarImagem = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagem)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -68,6 +70,7 @@
             this.picImagem.Size = new System.Drawing.Size(528, 274);
             this.picImagem.TabIndex = 0;
             this.picImagem.TabStop = false;
+            this.picImagem.Click += new System.EventHandler(this.picImagem_Click);
             // 
             // chkEstender
             // 
@@ -79,6 +82,7 @@
             this.chkEstender.TabIndex = 1;
             this.chkEstender.Text = "Estender";
             this.chkEstender.UseVisualStyleBackColor = true;
+            this.chkEstender.CheckedChanged += new System.EventHandler(this.chkEstender_CheckedChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -101,6 +105,7 @@
             this.btnMostrar.TabIndex = 0;
             this.btnMostrar.Text = "Mostrar Imagem";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnLimpar
             // 
@@ -111,6 +116,7 @@
             this.btnLimpar.TabIndex = 1;
             this.btnLimpar.Text = "Limpar a Imagem";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCorDeFundo
             // 
@@ -121,6 +127,7 @@
             this.btnCorDeFundo.TabIndex = 2;
             this.btnCorDeFundo.Text = "Definir a cor da tela de fundo";
             this.btnCorDeFundo.UseVisualStyleBackColor = true;
+            this.btnCorDeFundo.Click += new System.EventHandler(this.btnCorDeFundo_Click);
             // 
             // btnFechar
             // 
@@ -131,6 +138,15 @@
             this.btnFechar.TabIndex = 3;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // ofdSelecionarImagem
+            // 
+            this.ofdSelecionarImagem.FileName = "openFileDialog1";
+            this.ofdSelecionarImagem.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
+    "s (*.*)|*.*";
+            this.ofdSelecionarImagem.Title = "Selecionar um arquivo de imagem";
+            this.ofdSelecionarImagem.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Form1
             // 
@@ -159,6 +175,8 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCorDeFundo;
         private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.OpenFileDialog ofdSelecionarImagem;
     }
 }
 
